@@ -1,1 +1,1 @@
-# rational-library
+# rational.h library
