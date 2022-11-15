@@ -20,3 +20,7 @@ ${EXMP}decreaseRationalsEx.out: ${EXMP}decreaseRationalsEx.c
 ${EXMP}increaseRationalsEx.out: ${EXMP}increaseRationalsEx.c
 	gcc ${EXMP}increaseRationalsEx.c ${BLD}increaseRational.o -o increaseRationalsEx.out
 	mv increaseRationalsEx.out examples/
+
+clean:
+	rm -f $(wildcard ${EXMP}*.out)
+	rm -f $(wildcard ${BLD}*.o)
