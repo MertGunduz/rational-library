@@ -5,6 +5,7 @@
 
 int main(void)
 {
+    /* defining two rationals */
     rational exampleRational1 = {2, 8};
     rational exampleRational2 = {6, 8};
     

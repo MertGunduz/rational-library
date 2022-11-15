@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "rational.h": "c",
+        "stdio.h": "c"
+    },
+}

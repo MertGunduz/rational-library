@@ -4,5 +4,8 @@
 
 void decreaseRational(rational *rationalInput)
 {
-    (*rationalInput).numerator--;
+    if (isDenominatorValid(*rationalInput))
+    {
+        (*rationalInput).numerator--;
+    }
 }

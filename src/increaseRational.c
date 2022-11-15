@@ -4,5 +4,8 @@
 
 void increaseRational(rational *rationalInput)
 {
-    (*rationalInput).numerator++;
+    if (isDenominatorValid(*rationalInput))
+    {
+        (*rationalInput).numerator++;
+    }
 }
