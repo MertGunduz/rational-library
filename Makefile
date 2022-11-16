@@ -2,7 +2,7 @@ EXMP:= examples/
 SRC:= src/
 BLD:= build/
 
-all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}getRationalGcdEx.out
+all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out
 
 # =================
 #   LIBRARY FILES
@@ -22,6 +22,11 @@ ${BLD}decreaseRational.o: ${SRC}decreaseRational.c
 ${BLD}isDenominatorsEqual.o: ${SRC}isDenominatorsEqual.c
 	gcc -c ${SRC}isDenominatorsEqual.c
 	mv isDenominatorsEqual.o build/	
+
+# isNumeratorsEqual.o - library source #
+${BLD}isNumeratorsEqual.o: ${SRC}isNumeratorsEqual.c
+	gcc -c ${SRC}isNumeratorsEqual.c
+	mv isNumeratorsEqual.o build/	
 
 # isdenominatorValid.o - library source #
 ${BLD}isDenominatorValid.o: ${SRC}isDenominatorValid.c
@@ -51,6 +56,11 @@ ${EXMP}increaseRationalsEx.out: ${EXMP}increaseRationalsEx.c
 ${EXMP}isDenominatorsEqualEx.out: ${EXMP}isDenominatorsEqualEx.c
 	gcc ${EXMP}isDenominatorsEqualEx.c ${BLD}isDenominatorsEqual.o ${BLD}isDenominatorValid.o -o isDenominatorsEqualEx.out
 	mv isDenominatorsEqualEx.out examples/
+
+# isNumeratorsEqualEx.out - example source #
+${EXMP}isNumeratorsEqualEx.out: ${EXMP}isNumeratorsEqualEx.c
+	gcc ${EXMP}isNumeratorsEqualEx.c ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o -o isNumeratorsEqualEx.out
+	mv isNumeratorsEqualEx.out examples/
 
 # getRationalGcdEx.out - example source #
 ${EXMP}getRationalGcdEx.out: ${EXMP}getRationalGcdEx.c

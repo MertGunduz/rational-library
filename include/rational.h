@@ -15,6 +15,7 @@ extern void decreaseRational(rational *rationalInput);
 
 /* bool type functions */
 extern bool isDenominatorsEqual(rational ratioanlInput1, rational ratioanlInput2);
+extern bool isNumeratorsEqual(rational ratioanlInput1, rational ratioanlInput2);
 extern bool isDenominatorValid(rational rationalInput);
 
 /* int type functions */
