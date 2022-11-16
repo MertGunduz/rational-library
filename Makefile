@@ -2,7 +2,7 @@ EXMP:= examples/
 SRC:= src/
 BLD:= build/
 
-all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out
+all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o  ${BLD}isRationalsEqual.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out ${EXMP}isRationalsEqualEx.out
 
 # =================
 #   LIBRARY FILES
@@ -38,6 +38,11 @@ ${BLD}getRationalGcd.o: ${SRC}getRationalGcd.c
 	gcc -c ${SRC}getRationalGcd.c
 	mv getRationalGcd.o build/	
 
+# isRationalsEqual.o - library source #
+${BLD}isRationalsEqual.o: ${SRC}isRationalsEqual.c
+	gcc -c ${SRC}isRationalsEqual.c
+	mv isRationalsEqual.o build/	
+
 # =================
 #   EXAMPLE FILES 
 # ================= 
@@ -66,6 +71,11 @@ ${EXMP}isNumeratorsEqualEx.out: ${EXMP}isNumeratorsEqualEx.c
 ${EXMP}getRationalGcdEx.out: ${EXMP}getRationalGcdEx.c
 	gcc ${EXMP}getRationalGcdEx.c ${BLD}getRationalGcd.o ${BLD}isDenominatorValid.o -o getRationalGcdEx.out
 	mv getRationalGcdEx.out examples/
+
+# isRationalsEqualEx.out - example source #
+${EXMP}isRationalsEqualEx.out: ${EXMP}isRationalsEqualEx.c
+	gcc ${EXMP}isRationalsEqualEx.c ${BLD}isRationalsEqual.o ${BLD}getRationalGcd.o  ${BLD}isDenominatorValid.o -o isRationalsEqualEx.out
+	mv isRationalsEqualEx.out examples/
 
 # clean - deletes all the library object files and example executables #
 clean:

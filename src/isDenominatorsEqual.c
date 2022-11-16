@@ -2,11 +2,11 @@
 
 #include "../include/rational.h"
 
-bool isDenominatorsEqual(rational ratioanlInput1, rational ratioanlInput2)
+bool isDenominatorsEqual(rational rationalInput1, rational rationalInput2)
 {
-    if (isDenominatorValid(ratioanlInput1) && isDenominatorValid(ratioanlInput2))
+    if (isDenominatorValid(rationalInput1) && isDenominatorValid(rationalInput2))
     {
-        if (ratioanlInput1.denominator == ratioanlInput2.denominator)
+        if (rationalInput1.denominator == rationalInput2.denominator)
         {
             return true;
         }
