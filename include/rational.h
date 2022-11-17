@@ -24,3 +24,4 @@ extern int getRationalGcd(rational rationalInput);
 
 /* rational type functions */
 extern rational multiplyRationals(rational rationalInput1, rational rationalInput2);
+extern rational divideRationals(rational rationalInput1, rational rationalInput2);

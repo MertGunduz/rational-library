@@ -2,7 +2,7 @@ EXMP:= examples/
 SRC:= src/
 BLD:= build/
 
-all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o  ${BLD}isRationalsEqual.o ${BLD}multiplyRationals.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out ${EXMP}isRationalsEqualEx.out ${EXMP}multiplyRationalsEx.out
+all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o  ${BLD}isRationalsEqual.o ${BLD}multiplyRationals.o ${BLD}divideRationals.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out ${EXMP}isRationalsEqualEx.out ${EXMP}multiplyRationalsEx.out ${EXMP}divideRationalsEx.out
 
 # =================
 #   LIBRARY FILES
@@ -56,6 +56,11 @@ ${BLD}${LS8}.o: ${SRC}${LS8}.c
 	gcc -c ${SRC}${LS8}.c
 	mv ${LS8}.o build/
 
+# divideRationals.o - library source (LS) #
+LS9 = divideRationals
+${BLD}${LS9}.o: ${SRC}${LS9}.c
+	gcc -c ${SRC}${LS9}.c
+	mv ${LS9}.o build/
 # =================
 #   EXAMPLE FILES 
 # ================= 
@@ -94,6 +99,11 @@ ${EXMP}isRationalsEqualEx.out: ${EXMP}isRationalsEqualEx.c
 ${EXMP}multiplyRationalsEx.out: ${EXMP}multiplyRationalsEx.c
 	gcc ${EXMP}multiplyRationalsEx.c ${BLD}${LS8}.o  ${BLD}${LS5}.o -o multiplyRationalsEx.out
 	mv multiplyRationalsEx.out examples/
+
+# divideRationalsEx.out - example source #
+${EXMP}divideRationalsEx.out: ${EXMP}divideRationalsEx.c
+	gcc ${EXMP}divideRationalsEx.c ${BLD}${LS9}.o  ${BLD}${LS5}.o -o divideRationalsEx.out
+	mv divideRationalsEx.out examples/
 
 # clean - deletes all the library object files and example executables #
 clean:
