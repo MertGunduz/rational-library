@@ -62,7 +62,7 @@ ${BLD}${LS8}.o: ${SRC}${LS8}.c
 
 # decreaseRationalsEx.out - example source #
 ${EXMP}decreaseRationalsEx.out: ${EXMP}decreaseRationalsEx.c
-	gcc ${EXMP}decreaseRationalsEx.c ${BLD}${LS2}.o ${BLD}isDenomi${LS5}natorValid.o -o decreaseRationalsEx.out
+	gcc ${EXMP}decreaseRationalsEx.c ${BLD}${LS2}.o ${BLD}${LS5}.o -o decreaseRationalsEx.out
 	mv decreaseRationalsEx.out examples/
 
 # increaseRationalsEx.out - example source #
