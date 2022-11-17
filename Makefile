@@ -8,45 +8,53 @@ all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual
 #   LIBRARY FILES
 # ================= 
 
-# increaseRational.o - library source #
-${BLD}increaseRational.o: ${SRC}increaseRational.c
-	gcc -c ${SRC}increaseRational.c
-	mv increaseRational.o build/
+# increaseRational.o - library source (LS) #
+LS1 = increaseRational
+${BLD}${LS1}.o: ${SRC}${LS1}.c
+	gcc -c ${SRC}${LS1}.c
+	mv ${LS1}.o build/
 
-# decreaseRational.o - library source #
-${BLD}decreaseRational.o: ${SRC}decreaseRational.c
-	gcc -c ${SRC}decreaseRational.c
-	mv decreaseRational.o build/
+# decreaseRational.o - library source (LS) #
+LS2 = decreaseRational
+${BLD}${LS2}.o: ${SRC}${LS2}.c
+	gcc -c ${SRC}${LS2}.c
+	mv ${LS2}.o build/
 
-# isDenominatorsEqual.o - library source #
-${BLD}isDenominatorsEqual.o: ${SRC}isDenominatorsEqual.c
-	gcc -c ${SRC}isDenominatorsEqual.c
-	mv isDenominatorsEqual.o build/	
+# isDenominatorsEqual.o - library source (LS) #
+LS3 = isDenominatorsEqual
+${BLD}${LS3}.o: ${SRC}${LS3}.c
+	gcc -c ${SRC}${LS3}.c
+	mv ${LS3}.o build/	
 
-# isNumeratorsEqual.o - library source #
-${BLD}isNumeratorsEqual.o: ${SRC}isNumeratorsEqual.c
-	gcc -c ${SRC}isNumeratorsEqual.c
-	mv isNumeratorsEqual.o build/	
+# isNumeratorsEqual.o - library source (LS) #
+LS4 = isNumeratorsEqual
+${BLD}${LS4}.o: ${SRC}${LS4}.c
+	gcc -c ${SRC}${LS4}.c
+	mv ${LS4}.o build/	
 
-# isdenominatorValid.o - library source #
-${BLD}isDenominatorValid.o: ${SRC}isDenominatorValid.c
-	gcc -c ${SRC}isDenominatorValid.c
-	mv isDenominatorValid.o build/	
+# isdenominatorValid.o - library source (LS) #
+LS5 = isDenominatorValid
+${BLD}${LS5}.o: ${SRC}${LS5}.c
+	gcc -c ${SRC}${LS5}.c
+	mv ${LS5}.o build/	
 	
-# getRationalGcd.o - library source #
-${BLD}getRationalGcd.o: ${SRC}getRationalGcd.c
-	gcc -c ${SRC}getRationalGcd.c
-	mv getRationalGcd.o build/	
+# getRationalGcd.o - library source (LS) #
+LS6 = getRationalGcd
+${BLD}${LS6}.o: ${SRC}${LS6}.c
+	gcc -c ${SRC}${LS6}.c
+	mv ${LS6}.o build/	
 
-# isRationalsEqual.o - library source #
-${BLD}isRationalsEqual.o: ${SRC}isRationalsEqual.c
-	gcc -c ${SRC}isRationalsEqual.c
-	mv isRationalsEqual.o build/	
+# isRationalsEqual.o - library source (LS) #
+LS7 = isRationalsEqual
+${BLD}${LS7}.o: ${SRC}${LS7}.c
+	gcc -c ${SRC}${LS7}.c
+	mv ${LS7}.o build/	
 
-# multiplyRationals.o - library source #
-${BLD}multiplyRationals.o: ${SRC}multiplyRationals.c
-	gcc -c ${SRC}multiplyRationals.c
-	mv multiplyRationals.o build/	
+# multiplyRationals.o - library source (LS) #
+LS8 = multiplyRationals
+${BLD}${LS8}.o: ${SRC}${LS8}.c
+	gcc -c ${SRC}${LS8}.c
+	mv ${LS8}.o build/
 
 # =================
 #   EXAMPLE FILES 
@@ -54,37 +62,37 @@ ${BLD}multiplyRationals.o: ${SRC}multiplyRationals.c
 
 # decreaseRationalsEx.out - example source #
 ${EXMP}decreaseRationalsEx.out: ${EXMP}decreaseRationalsEx.c
-	gcc ${EXMP}decreaseRationalsEx.c ${BLD}decreaseRational.o ${BLD}isDenominatorValid.o -o decreaseRationalsEx.out
+	gcc ${EXMP}decreaseRationalsEx.c ${BLD}${LS2}.o ${BLD}isDenomi${LS5}natorValid.o -o decreaseRationalsEx.out
 	mv decreaseRationalsEx.out examples/
 
 # increaseRationalsEx.out - example source #
 ${EXMP}increaseRationalsEx.out: ${EXMP}increaseRationalsEx.c
-	gcc ${EXMP}increaseRationalsEx.c ${BLD}increaseRational.o ${BLD}isDenominatorValid.o -o increaseRationalsEx.out
+	gcc ${EXMP}increaseRationalsEx.c ${BLD}${LS1}.o ${BLD}${LS5}.o -o increaseRationalsEx.out
 	mv increaseRationalsEx.out examples/
 
 # isDenominatorsEqualEx.out - example source #
 ${EXMP}isDenominatorsEqualEx.out: ${EXMP}isDenominatorsEqualEx.c
-	gcc ${EXMP}isDenominatorsEqualEx.c ${BLD}isDenominatorsEqual.o ${BLD}isDenominatorValid.o -o isDenominatorsEqualEx.out
+	gcc ${EXMP}isDenominatorsEqualEx.c ${BLD}${LS3}.o ${BLD}${LS5}.o -o isDenominatorsEqualEx.out
 	mv isDenominatorsEqualEx.out examples/
 
 # isNumeratorsEqualEx.out - example source #
 ${EXMP}isNumeratorsEqualEx.out: ${EXMP}isNumeratorsEqualEx.c
-	gcc ${EXMP}isNumeratorsEqualEx.c ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o -o isNumeratorsEqualEx.out
+	gcc ${EXMP}isNumeratorsEqualEx.c ${BLD}${LS4}.o ${BLD}${LS5}.o -o isNumeratorsEqualEx.out
 	mv isNumeratorsEqualEx.out examples/
 
 # getRationalGcdEx.out - example source #
 ${EXMP}getRationalGcdEx.out: ${EXMP}getRationalGcdEx.c
-	gcc ${EXMP}getRationalGcdEx.c ${BLD}getRationalGcd.o ${BLD}isDenominatorValid.o -o getRationalGcdEx.out
+	gcc ${EXMP}getRationalGcdEx.c ${BLD}${LS6}.o ${BLD}${LS5}.o -o getRationalGcdEx.out
 	mv getRationalGcdEx.out examples/
 
 # isRationalsEqualEx.out - example source #
 ${EXMP}isRationalsEqualEx.out: ${EXMP}isRationalsEqualEx.c
-	gcc ${EXMP}isRationalsEqualEx.c ${BLD}isRationalsEqual.o ${BLD}getRationalGcd.o  ${BLD}isDenominatorValid.o -o isRationalsEqualEx.out
+	gcc ${EXMP}isRationalsEqualEx.c ${BLD}${LS7}.o ${BLD}${LS6}.o  ${BLD}${LS5}.o -o isRationalsEqualEx.out
 	mv isRationalsEqualEx.out examples/
 
 # multiplyRationalsEx.out - example source #
 ${EXMP}multiplyRationalsEx.out: ${EXMP}multiplyRationalsEx.c
-	gcc ${EXMP}multiplyRationalsEx.c ${BLD}multiplyRationals.o  ${BLD}isDenominatorValid.o -o multiplyRationalsEx.out
+	gcc ${EXMP}multiplyRationalsEx.c ${BLD}${LS8}.o  ${BLD}${LS5}.o -o multiplyRationalsEx.out
 	mv multiplyRationalsEx.out examples/
 
 # clean - deletes all the library object files and example executables #
