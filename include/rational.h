@@ -21,3 +21,6 @@ extern bool isRationalsEqual(rational rationalInput1, rational rationalInput2);
 
 /* int type functions */
 extern int getRationalGcd(rational rationalInput);
+
+/* rational type functions */
+extern rational multiplyRationals(rational rationalInput1, rational rationalInput2);
