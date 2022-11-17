@@ -26,3 +26,4 @@ extern int getRationalGcd(rational rationalInput);
 extern rational multiplyRationals(rational rationalInput1, rational rationalInput2);
 extern rational divideRationals(rational rationalInput1, rational rationalInput2);
 extern rational sumRationals(rational rationalInput1, rational rationalInput2);
+extern rational subtractRationals(rational rationalInput1, rational rationalInput2);

@@ -2,7 +2,7 @@ EXMP:= examples/
 SRC:= src/
 BLD:= build/
 
-all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o  ${BLD}isRationalsEqual.o ${BLD}multiplyRationals.o ${BLD}divideRationals.o ${BLD}sumRationals.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out ${EXMP}isRationalsEqualEx.out ${EXMP}multiplyRationalsEx.out ${EXMP}divideRationalsEx.out ${EXMP}sumRationalsEx.out
+all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o  ${BLD}isRationalsEqual.o ${BLD}multiplyRationals.o ${BLD}divideRationals.o ${BLD}sumRationals.o ${BLD}subtractRationals.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out ${EXMP}isRationalsEqualEx.out ${EXMP}multiplyRationalsEx.out ${EXMP}divideRationalsEx.out ${EXMP}sumRationalsEx.out ${EXMP}subtractRationalsEx.out
 
 # =================
 #   LIBRARY FILES
@@ -67,6 +67,12 @@ LS10 = sumRationals
 ${BLD}${LS10}.o: ${SRC}${LS10}.c
 	gcc -c ${SRC}${LS10}.c
 	mv ${LS10}.o build/
+
+# subtractRationals.o - library source (LS) #
+LS11 = subtractRationals
+${BLD}${LS11}.o: ${SRC}${LS11}.c
+	gcc -c ${SRC}${LS11}.c
+	mv ${LS11}.o build/
 # =================
 #   EXAMPLE FILES 
 # ================= 
@@ -115,6 +121,11 @@ ${EXMP}divideRationalsEx.out: ${EXMP}divideRationalsEx.c
 ${EXMP}sumRationalsEx.out: ${EXMP}sumRationalsEx.c
 	gcc ${EXMP}sumRationalsEx.c ${BLD}${LS10}.o  ${BLD}${LS5}.o -o sumRationalsEx.out
 	mv sumRationalsEx.out examples/
+
+# sumRationalsEx.out - example source #
+${EXMP}subtractRationalsEx.out: ${EXMP}subtractRationalsEx.c
+	gcc ${EXMP}subtractRationalsEx.c ${BLD}${LS11}.o  ${BLD}${LS5}.o -o subtractRationalsEx.out
+	mv subtractRationalsEx.out examples/
 
 # clean - deletes all the library object files and example executables #
 clean:
