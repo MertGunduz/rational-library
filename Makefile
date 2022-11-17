@@ -2,11 +2,11 @@ EXMP:= examples/
 SRC:= src/
 BLD:= build/
 
-all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o  ${BLD}isRationalsEqual.o ${BLD}multiplyRationals.o ${BLD}divideRationals.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out ${EXMP}isRationalsEqualEx.out ${EXMP}multiplyRationalsEx.out ${EXMP}divideRationalsEx.out
+all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o  ${BLD}isRationalsEqual.o ${BLD}multiplyRationals.o ${BLD}divideRationals.o ${BLD}sumRationals.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out ${EXMP}isRationalsEqualEx.out ${EXMP}multiplyRationalsEx.out ${EXMP}divideRationalsEx.out ${EXMP}sumRationalsEx.out
 
 # =================
 #   LIBRARY FILES
-# ================= 
+# =================
 
 # increaseRational.o - library source (LS) #
 LS1 = increaseRational
@@ -61,6 +61,12 @@ LS9 = divideRationals
 ${BLD}${LS9}.o: ${SRC}${LS9}.c
 	gcc -c ${SRC}${LS9}.c
 	mv ${LS9}.o build/
+
+# sumRationals.o - library source (LS) #
+LS10 = sumRationals
+${BLD}${LS10}.o: ${SRC}${LS10}.c
+	gcc -c ${SRC}${LS10}.c
+	mv ${LS10}.o build/
 # =================
 #   EXAMPLE FILES 
 # ================= 
@@ -104,6 +110,11 @@ ${EXMP}multiplyRationalsEx.out: ${EXMP}multiplyRationalsEx.c
 ${EXMP}divideRationalsEx.out: ${EXMP}divideRationalsEx.c
 	gcc ${EXMP}divideRationalsEx.c ${BLD}${LS9}.o  ${BLD}${LS5}.o -o divideRationalsEx.out
 	mv divideRationalsEx.out examples/
+
+# sumRationalsEx.out - example source #
+${EXMP}sumRationalsEx.out: ${EXMP}sumRationalsEx.c
+	gcc ${EXMP}sumRationalsEx.c ${BLD}${LS10}.o  ${BLD}${LS5}.o -o sumRationalsEx.out
+	mv sumRationalsEx.out examples/
 
 # clean - deletes all the library object files and example executables #
 clean:
