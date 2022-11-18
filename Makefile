@@ -2,7 +2,7 @@ EXMP:= examples/
 SRC:= src/
 BLD:= build/
 
-all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o  ${BLD}isRationalsEqual.o ${BLD}multiplyRationals.o ${BLD}divideRationals.o ${BLD}sumRationals.o ${BLD}subtractRationals.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out ${EXMP}isRationalsEqualEx.out ${EXMP}multiplyRationalsEx.out ${EXMP}divideRationalsEx.out ${EXMP}sumRationalsEx.out ${EXMP}subtractRationalsEx.out
+all: ${BLD}increaseRational.o ${BLD}decreaseRational.o ${BLD}isDenominatorsEqual.o ${BLD}isNumeratorsEqual.o ${BLD}isDenominatorValid.o ${BLD}getRationalGcd.o  ${BLD}isRationalsEqual.o ${BLD}multiplyRationals.o ${BLD}divideRationals.o ${BLD}sumRationals.o ${BLD}subtractRationals.o ${EXMP}decreaseRationalsEx.out ${EXMP}increaseRationalsEx.out ${EXMP}isDenominatorsEqualEx.out ${EXMP}isNumeratorsEqualEx.out ${EXMP}getRationalGcdEx.out ${EXMP}isRationalsEqualEx.out ${EXMP}multiplyRationalsEx.out ${EXMP}divideRationalsEx.out ${EXMP}sumRationalsEx.out ${EXMP}subtractRationalsEx.out ${EXMP}declaringRationalsEx.out
 
 # =================
 #   LIBRARY FILES
@@ -126,6 +126,11 @@ ${EXMP}sumRationalsEx.out: ${EXMP}sumRationalsEx.c
 ${EXMP}subtractRationalsEx.out: ${EXMP}subtractRationalsEx.c
 	gcc ${EXMP}subtractRationalsEx.c ${BLD}${LS11}.o  ${BLD}${LS5}.o -o subtractRationalsEx.out
 	mv subtractRationalsEx.out examples/
+
+# declaringRationalsEx.out - example source #
+${EXMP}declaringRationalsEx.out: ${EXMP}declaringRationalsEx.c
+	gcc ${EXMP}declaringRationalsEx.c -o declaringRationalsEx.out
+	mv declaringRationalsEx.out examples/
 
 # clean - deletes all the library object files and example executables #
 clean:
