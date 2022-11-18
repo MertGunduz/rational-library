@@ -20,16 +20,65 @@
             max-width: 1080px;
             margin-left: auto;
             margin-right: auto;
+            background: url(background.png);
         }
         
         header {
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-bottom: 1px solid rgb(242, 242, 242);
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            background-color: white;
+        }
+
+        font {
+            font-size: 0.85rem;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .mb20 {
+            margin-bottom: 20px;
+        }
+
+        .mb40 {
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>rational.h</h1>
+        <font>
+            rational.h - C library for fractional numbers
+            <br>
+            Copyright © 2022 Sval
+        </font>
     </header>
+    <main>
+        <div class="mb40">
+            <h3 class="mb10">NAME</h3>
+            <p>rational.h</p>
+        </div>
+
+        <div class="mb40">
+            <h3 class="mb10">SYNOPSIS</h3>
+            <p>#include "rational.h"</p>
+        </div>
+
+        <div class="mb40">
+            <h3 class="mb10">DESCRIPTION</h3>
+            <p>"rational.h" is a C library that provides developers some functions and structs to simplify rational number definitions and declarations. It contains fraction validation control algorithms and simplifying functions for the rational expressions.</p>
+        </div>
+    </main>
 </body>
 </html>
