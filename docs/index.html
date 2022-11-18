@@ -33,6 +33,15 @@
         main {
             padding: 20px;
             background-color: white;
+            border-bottom: 1px solid rgba(105, 105, 105, 0.3);
+        }
+
+        footer {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;        
         }
 
         font {
@@ -90,7 +99,12 @@
 
         <div class="mb40">
             <h3 class="mb10">DESCRIPTION</h3>
-            <p>"rational.h" is a C library that provides developers some functions and structs to simplify rational number definitions and declarations. It contains fraction validation control algorithms and simplifying functions for the rational expressions.</p>
+            <p>"rational.h" is a C library that provides developers some functions and structs to simplify rational number definitions and declarations by using an automatic denumerator validation function. It contains fractional operation functions for rational expressions.</p>
+        </div>
+
+        <div class="mb40">
+            <h3 class="mb10">LIBRARY USAGE</h3>
+            <p>Scientific programming, mathematical analysis, computing, algorithms.</p>
         </div>
 
         <div class="mb40">
@@ -105,19 +119,57 @@
             <h3 class="mb10">FUNCTIONS</h3>
             <div class="mb10x">
                 <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/increaseRationalsEx.c">1-expression): extern void increaseRational(rational *rationalInput);</a></p>
-                <i>1-description): Increases the numerator of a rational number by 1.</i>
+                <i>1-description): Increases the numerator of a rational number by <strong>1</strong>.</i>
             </div>
             <br>
             <div class="mb10x">
                 <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/decreaseRationalsEx.c">2-expression): extern void decreaseRational(rational *rationalInput);</a></p>
-                <i>2-description): Decreases the numerator of a rational number by 1.</i>
+                <i>2-description): Decreases the numerator of a rational number by <strong>1</strong>.</i>
             </div>
             <br>
             <div class="mb10x">
                 <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/isDenominatorsEqualEx.c">3-expression): extern bool isDenominatorsEqual(rational rationalInput1, rational rationalInput2);</a></p>
-                <i>3-description): Checks the denominators and returns 1 if they are equal, returns 0 if they are not equal.</i>
+                <i>3-description): Checks the denominators and returns <strong>true</strong> if they are equal, returns <strong>false</strong> if they are not equal.</i>
+            </div>
+            <br>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/isNumeratorsEqualEx.c">4-expression): extern bool isNumeratorsEqual(rational rationalInput1, rational rationalInput2);</a></p>
+                <i>4-description): Checks the numerators and returns <strong>true</strong> if they are equal, returns <strong>false</strong> if they are not equal.</i>
+            </div>
+            <br>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/isRationalsEqualEx.c">5-expression): extern bool isRationalsEqual(rational rationalInput1, rational rationalInput2);</a></p>
+                <i>5-description): Checks the rational expressions and returns <strong>true</strong> if they are equal, returns <strong>false</strong> if they are not equal.</i>
+            </div>
+            <br>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/getRationalGcdEx.c">6-expression): extern int getRationalGcd(rational rationalInput);</a></p>
+                <i>6-description): Finds the great common divisor of a rational number and returns the <strong>gcd value</strong>.</i>
+            </div>
+            <br>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/multiplyRationalsEx.c">7-expression): extern rational multiplyRationals(rational rationalInput1, rational rationalInput2);</a></p>
+                <i>7-description): Multiplies two rational numbers and returns the multiplied <strong>rational number value</strong>.</i>
+            </div>
+            <br>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/divideRationalsEx.c">8-expression): extern rational divideRationals(rational rationalInput1, rational rationalInput2);</a></p>
+                <i>8-description): Divides two rational numbers and returns the divided <strong>rational number value</strong>.</i>
+            </div>
+            <br>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/sumRationalsEx.c">9-expression): extern rational sumRationals(rational rationalInput1, rational rationalInput2);</a></p>
+                <i>9-description): Adds two rational numbers and returns the added <strong>rational number value</strong>.</i>
+            </div>
+            <br>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="https://github.com/MertGunduz/rational-library/blob/main/examples/subtractRationalsEx.c">10-expression): extern rational subtractRationals(rational rationalInput1, rational rationalInput2);</a></p>
+                <i>10-description): Subtracts two rational numbers and returns the subtracted <strong>rational number value</strong>.</i>
             </div>
         </div>
     </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
