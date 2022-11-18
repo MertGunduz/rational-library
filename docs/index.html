@@ -7,13 +7,10 @@
     <title>rational.h</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@400;500;600;700&display=swap');
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Finlandica', sans-serif;
         }
 
         body {
@@ -29,7 +26,7 @@
             justify-content: center;
             align-items: center;
             background-color: white;
-            border-bottom: 1px solid rgb(242, 242, 242);
+            border-bottom: 1px solid rgba(105, 105, 105, 0.3);
             text-align: center;
         }
 
@@ -42,9 +39,17 @@
             font-size: 0.85rem;
         }
 
+        i {
+            color: rgba(255, 42, 42, 0.8);
+        }
+
         .mb10 {
             margin-bottom: 10px;
-            font-weight: 500;
+            font-weight: 600;
+        }
+
+        mb10x {
+            margin-bottom: 10px;
         }
 
         .mb20 {
@@ -53,6 +58,14 @@
 
         .mb40 {
             margin-bottom: 40px;
+        }
+
+        .snip {
+            margin-bottom: 10px;
+        }
+
+        a {
+            font-weight: 600;
         }
     </style>
 </head>
@@ -78,6 +91,27 @@
         <div class="mb40">
             <h3 class="mb10">DESCRIPTION</h3>
             <p>"rational.h" is a C library that provides developers some functions and structs to simplify rational number definitions and declarations. It contains fraction validation control algorithms and simplifying functions for the rational expressions.</p>
+        </div>
+
+        <div class="mb40">
+            <h3 class="mb10">STRUCTURES</h3>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="details/rational.html">1-expression): typedef struct rational {int numerator; int denominator;} rational;</a></p>
+                <i>1-description): The main struct for declaring rational expressions.</i>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="mb10">FUNCTIONS</h3>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="details/increaseRational.html">1-expression): extern void increaseRational(rational *rationalInput);</a></p>
+                <i>1-description): Increases the numerator of a rational number by 1.</i>
+            </div>
+            <br>
+            <div class="mb10x">
+                <p class="snip"><a target="_blank" href="details/decreaseRational.html">2-expression): extern void decreaseRational(rational *rationalInput);</a></p>
+                <i>2-description): Decreases the numerator of a rational number by 1.</i>
+            </div>
         </div>
     </main>
 </body>
