@@ -1,5 +1,7 @@
-rational.h - C library for fractional numbers\
-GNU General Public License v3.0
+#### rational.h - C library for fractional numbers
+#### GNU General Public License v3.0
+
+<br>
 
 ### NAME 
 
@@ -7,7 +9,7 @@ rational.h
 
 <br>
 
-### SYNOPSIS {#synopsis .mb10}
+### SYNOPSIS
 
 \#include \"rational.h\"
 
