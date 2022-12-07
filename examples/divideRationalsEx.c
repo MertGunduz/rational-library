@@ -6,8 +6,8 @@
 int main(void)
 {
     /* defining two rationals */
-    rational exampleRational1 = {4, 6};
-    rational exampleRational2 = {2, 2};
+    rational exampleRational1 = {2, 3};
+    rational exampleRational2 = {1, 2};
     
     /* divide example rationals and assigning the value into a new rational */
     rational newRational = divideRationals(exampleRational1, exampleRational2);
