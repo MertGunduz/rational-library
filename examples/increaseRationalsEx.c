@@ -1,7 +1,7 @@
 /* increaseRationalsEx.c */
 
 #include <stdio.h>
-#include "../include/rational.h"
+#include "../src/rational.h"
 
 int main(void)
 {

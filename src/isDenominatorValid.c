@@ -1,6 +1,6 @@
 /* isDenominatorValid.c */
 
-#include "../include/rational.h"
+#include "rational.h"
 
 bool isDenominatorValid(rational rationalInput)
 {

@@ -1,0 +1,1 @@
+add_library(rational STATIC decreaseRational.c divideRationals.c getRationalGcd.c increaseRational.c isDenominatorsEqual.c isDenominatorValid.c isNumeratorsEqual.c isRationalsEqual.c multiplyRationals.c subtractRationals.c sumRationals.c)

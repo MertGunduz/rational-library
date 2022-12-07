@@ -1,6 +1,6 @@
 /* sumRationals.c */
 
-#include "../include/rational.h"
+#include "rational.h"
 
 rational sumRationals(rational rationalInput1, rational rationalInput2)
 {

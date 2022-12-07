@@ -1,6 +1,6 @@
 /* isDenominatorsEqual.c */
 
-#include "../include/rational.h"
+#include "rational.h"
 
 bool isDenominatorsEqual(rational rationalInput1, rational rationalInput2)
 {

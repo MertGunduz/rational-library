@@ -1,6 +1,6 @@
 /* isRationalsEqual.c */
 
-#include "../include/rational.h"
+#include "rational.h"
 
 bool isRationalsEqual(rational rationalInput1, rational rationalInput2)
 {

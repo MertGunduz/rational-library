@@ -1,6 +1,6 @@
 /* divideRationals.c */
 
-#include "../include/rational.h"
+#include "rational.h"
 
 rational divideRationals(rational rationalInput1, rational rationalInput2)
 {

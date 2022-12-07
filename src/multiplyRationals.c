@@ -1,6 +1,6 @@
 /* multiplyRationals.c */
 
-#include "../include/rational.h"
+#include "rational.h"
 
 rational multiplyRationals(rational rationalInput1, rational rationalInput2)
 {

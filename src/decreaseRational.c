@@ -1,6 +1,6 @@
 /* decreaseRational.c */
 
-#include "../include/rational.h"
+#include "rational.h"
 
 void decreaseRational(rational *rationalInput)
 {

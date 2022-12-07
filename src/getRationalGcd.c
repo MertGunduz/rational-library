@@ -1,6 +1,6 @@
 /* getRationalGcd.c */
 
-#include "../include/rational.h"
+#include "rational.h"
 
 int getRationalGcd(rational rationalInput)
 {

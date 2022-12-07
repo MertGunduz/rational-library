@@ -1,6 +1,6 @@
 /* isNumeratorsEqual.c */
 
-#include "../include/rational.h"
+#include "rational.h"
 
 bool isNumeratorsEqual(rational rationalInput1, rational rationalInput2)
 {
